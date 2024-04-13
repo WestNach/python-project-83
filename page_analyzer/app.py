@@ -1,4 +1,5 @@
 import os
+from page_analyzer.config import Config
 from flask import \
     Flask, \
     render_template, \
@@ -8,4 +9,4 @@ from flask import \
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+app.config.from_object(Config)
