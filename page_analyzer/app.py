@@ -1,4 +1,3 @@
-import os
 from page_analyzer.config import Config
 from flask import \
     Flask, \
