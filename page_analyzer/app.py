@@ -29,7 +29,7 @@ logger = logging.getLogger(__name__)
 
 @app.route('/')
 def main_page():
-    return render_template('index.html', main_page='main_page')  # Исправлено: добавлены кавычки в 'main_page'
+    return render_template('index.html', main_page='main_page')
 
 @app.route('/urls', methods=['GET'])
 def get_urls():
@@ -38,7 +38,7 @@ def get_urls():
 
 @app.route('/urls', methods=['POST'])
 def post_urls():
-    form_data = request.form.to_dict()  # Исправлено: изменено имя переменной 'input' на 'form_data'
+    form_data = request.form.to_dict()
     url = form_data.get('url')
 
     if not valid(url):
